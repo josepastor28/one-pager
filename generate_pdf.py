@@ -144,4 +144,6 @@ if __name__ == "__main__":
     # Generate Spanish version
     es_success = asyncio.run(generate_pdf(language='es'))
 
-    sys.exit(0 if en_success and es_success else 1)
+    # Generate Arabic version
+    ar_success = asyncio.run(generate_pdf(language='ar'))
+    sys.exit(0 if en_success and es_success and ar_success else 1)
